@@ -6,6 +6,52 @@
  * License: SIL Open Font License 1.1
 */
 
+:root {
+  --color-purple-500: oklch(59.682% 0.12443 278.228);
+  --color-navy-200: oklch(82.949% 0.08701 281.444);
+  --color-white: oklch(100% 0.00011 271.152);
+
+  --font-family-rubik: "Rubik", sans-serif;
+
+  --font-size-32: calc(32 / 16 * 1rem);
+  --font-size-24: calc(24 / 16 * 1rem);
+  --font-size-18: calc(18 / 16 * 1rem);
+  --font-size-15: calc(15 / 16 * 1rem);
+
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+
+  --letter-spacing-0p5pc: calc(0.5 * 0.01em);
+  --letter-spacing-n2pc: calc(-2 * 0.01em);
+
+  --c-h2: var(--color-navy-200);
+  --c-username: var(--color-white);
+  --c-timeframe: var(--color-purple-500);
+  --c-activity: var(--color-white);
+  --c-current-time: var(--color-white);
+  --c-previous-time: var(--color-navy-200);
+
+  --ff-primary: var(--font-family-rubik);
+
+  --fs-h2: var(--font-size-15);
+  --fs-username: var(--font-size-24);
+  --fs-timeframe: var(--font-size-18);
+  --fs-activity: var(--font-size-18);
+  --fs-current-time: var(--font-size-32);
+  --fs-previous-time: var(--font-size-15);
+
+  --fw-h2: var(--font-weight-medium);
+  --fw-username: var(--font-weight-light);
+  --fw-timeframe: var(--font-weight-regular);
+  --fw-activity: var(--font-weight-medium);
+  --fw-current-time: var(--font-weight-light);
+  --fw-previous-time: var(--font-weight-regular);
+
+  --ls-h2: var(--letter-spacing-n2pc);
+  --ls-username: var(--letter-spacing-0p5pc);
+}
+
 *,
 *::before,
 *::after {
@@ -41,4 +87,46 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--ff-primary);
+}
+
+.user h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-h2);
+  letter-spacing: var(--ls-h2);
+  color: var(--c-h2);
+}
+
+.user-name {
+  font-size: var(--fs-username);
+  font-weight: var(--fw-username);
+  letter-spacing: var(--ls-username);
+  color: var(--c-username);
+}
+
+label {
+  font-size: var(--fs-timeframe);
+  font-weight: var(--fw-timeframe);
+  color: var(--c-timeframe);
+}
+
+h3 {
+  font-size: var(--fs-activity);
+  font-weight: var(--fw-activity);
+  color: var(--c-activity);
+}
+
+.activity-time p:first-child {
+  font-size: var(--fs-current-time);
+  font-weight: var(--fw-current-time);
+  color: var(--c-current-time);
+}
+
+.activity-time p:last-child {
+  font-size: var(--fs-previous-time);
+  font-weight: var(--fw-previous-time);
+  color: var(--c-previous-time);
 }
