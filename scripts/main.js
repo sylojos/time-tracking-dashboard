@@ -4,6 +4,8 @@ const selectedTimeFrameButton = document.querySelector(
 );
 
 let isFirstLoad = true;
+let liveRegionDebounce = undefined;
+let liveRegionTimeout = undefined;
 
 function showInitialStats(stats, timeFrame) {
   const activityContainer = document.querySelector(".activity-wrapper");
@@ -149,6 +151,8 @@ function showInitialStats(stats, timeFrame) {
 }
 
 function updateStats(stats, timeFrame) {
+  const liveRegionEl = document.querySelector("p[aria-live='polite']");
+
   for (const stat of stats) {
     const currentTimeLabel = document.querySelector(
       `.activity-${stat.title.replace(" ", "-").toLowerCase()} .activity-time p:first-child`,
@@ -207,6 +211,25 @@ function updateStats(stats, timeFrame) {
     previousTimeSrHidden.textContent = `${stat.timeframes[timeFrame].previous}hrs`;
     previousTimeSrOnly.textContent = `${stat.timeframes[timeFrame].previous} hours`;
   }
+
+  // Clear existing timers if the user is still selecting other button before the callback function in the timer get executed
+  if (liveRegionDebounce) {
+    clearTimeout(liveRegionDebounce);
+  }
+
+  if (liveRegionTimeout) {
+    clearTimeout(liveRegionTimeout);
+  }
+
+  // Set live region announcement text (debounce - wait for the user to stop select radio button / settle on a choice before triggering live announcement)
+  liveRegionDebounce = setTimeout(() => {
+    liveRegionEl.textContent = `Dashboard updated with ${timeFrame} activity time.`;
+
+    // Clear the live region after a short duration
+    liveRegionTimeout = setTimeout(() => {
+      liveRegionEl.textContent = "";
+    }, 6000);
+  }, 500);
 }
 
 async function fetchActivityStats(selectedTimeFrame) {
