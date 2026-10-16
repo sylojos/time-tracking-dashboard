@@ -7,9 +7,18 @@
 */
 
 :root {
+  --color-purple-700: oklch(50.746% 0.22298 295.552);
+  --color-purple-600: oklch(52.381% 0.23445 279.232);
   --color-purple-500: oklch(59.682% 0.12443 278.228);
+  --color-navy-950: oklch(19.507% 0.03338 269.93);
+  --color-navy-900: oklch(26.347% 0.07863 276.571);
   --color-navy-200: oklch(82.949% 0.08701 281.444);
   --color-white: oklch(100% 0.00011 271.152);
+  --color-orange-300: oklch(75.789% 0.14911 38.906);
+  --color-blue-300: oklch(76.522% 0.1107 223.152);
+  --color-pink-400: oklch(69.724% 0.19801 12.131);
+  --color-green-400: oklch(76.275% 0.1614 153.95);
+  --color-yellow-300: oklch(84.411% 0.13336 87.258);
 
   --font-family-rubik: "Rubik", sans-serif;
 
@@ -31,6 +40,16 @@
   --c-activity: var(--color-white);
   --c-current-time: var(--color-white);
   --c-previous-time: var(--color-navy-200);
+  --c-page-bg: var(--color-navy-950);
+  --c-user-bg: var(--color-purple-600);
+  --c-timeframe-bg: var(--color-navy-900);
+  --c-work-bg: var(--color-orange-300);
+  --c-play-bg: var(--color-blue-300);
+  --c-study-bg: var(--color-pink-400);
+  --c-exercise-bg: var(--color-green-400);
+  --c-social-bg: var(--color-purple-700);
+  --c-self-care-bg: var(--color-yellow-300);
+  --c-stats-bg: var(--color-navy-900);
 
   --ff-primary: var(--font-family-rubik);
 
@@ -91,6 +110,15 @@ h6 {
 
 body {
   font-family: var(--ff-primary);
+  background-color: var(--c-page-bg);
+}
+
+.user-wrapper {
+  background-color: var(--c-timeframe-bg);
+}
+
+.user {
+  background-color: var(--c-user-bg);
 }
 
 .user h2 {
@@ -111,6 +139,34 @@ label {
   font-size: var(--fs-timeframe);
   font-weight: var(--fw-timeframe);
   color: var(--c-timeframe);
+}
+
+.activity-work {
+  background-color: var(--c-work-bg);
+}
+
+.activity-play {
+  background-color: var(--c-play-bg);
+}
+
+.activity-study {
+  background-color: var(--c-study-bg);
+}
+
+.activity-exercise {
+  background-color: var(--c-exercise-bg);
+}
+
+.activity-social {
+  background-color: var(--c-social-bg);
+}
+
+.activity-self-care {
+  background-color: var(--c-self-care-bg);
+}
+
+.activity-stats {
+  background-color: var(--c-stats-bg);
 }
 
 h3 {
