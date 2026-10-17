@@ -37,6 +37,8 @@
   --spacing-81: calc(81 / 16 * 1rem);
   --spacing-24: calc(24 / 16 * 1rem);
 
+  --radius-full: 50%;
+
   --c-h2: var(--color-navy-200);
   --c-username: var(--color-white);
   --c-timeframe: var(--color-purple-500);
@@ -53,6 +55,7 @@
   --c-social-bg: var(--color-purple-700);
   --c-self-care-bg: var(--color-yellow-300);
   --c-stats-bg: var(--color-navy-900);
+  --c-outer-ring: var(--color-white);
 
   --ff-primary: var(--font-family-rubik);
 
@@ -78,6 +81,9 @@
 
   --gap-row-dashboard: var(--spacing-24);
   --gap-activity: var(--spacing-24);
+
+  --br-outer-ring: var(--radius-full);
+  --br-user-avatar: var(--radius-full);
 }
 
 *,
@@ -162,6 +168,22 @@ body {
   font-weight: var(--fw-username);
   letter-spacing: var(--ls-username);
   color: var(--c-username);
+}
+
+.outer-ring {
+  inline-size: calc(70 / 16 * 1rem);
+  block-size: calc(70 / 16 * 1rem);
+  background-color: var(--c-outer-ring);
+  border-radius: var(--br-outer-ring);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-avatar {
+  inline-size: calc(64 / 16 * 1rem);
+  block-size: calc(64 / 16 * 1rem);
+  border-radius: var(--br-user-avatar);
 }
 
 label {
