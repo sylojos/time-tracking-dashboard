@@ -62,6 +62,7 @@
   --c-self-care-bg: var(--color-yellow-300);
   --c-stats-bg: var(--color-navy-900);
   --c-outer-ring: var(--color-white);
+  --c-timeframe-btn-active: var(--color-white);
 
   --ff-primary: var(--font-family-rubik);
 
@@ -229,10 +230,16 @@ input[type="radio"] {
   position: absolute;
 }
 
+input[type="radio"]:checked + label,
+input[type="radio"]:hover + label {
+  color: var(--c-timeframe-btn-active);
+}
+
 label {
   font-size: var(--fs-timeframe);
   font-weight: var(--fw-timeframe);
   color: var(--c-timeframe);
+  cursor: pointer;
 }
 
 .activity-wrapper {
