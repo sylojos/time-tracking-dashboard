@@ -258,32 +258,102 @@ label {
   gap: var(--gap-activity);
 }
 
+.activity-card {
+  block-size: calc(160 / 16 * 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card::before {
+  content: "";
+  position: absolute;
+  inset-inline-end: calc(18 / 16 * 1rem);
+}
+
 .activity-work {
   background-color: var(--c-work-bg);
+}
+
+.activity-work::before {
+  background-image: url("../images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: calc(79 / 16 * 1rem);
+  block-size: calc(79 / 16 * 1rem);
+  inset-block-start: calc(-11 / 16 * 1rem);
 }
 
 .activity-play {
   background-color: var(--c-play-bg);
 }
 
+.activity-play::before {
+  background-image: url("../images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: calc(76 / 16 * 1rem);
+  block-size: calc(77 / 16 * 1rem);
+  inset-block-start: calc(-5 / 16 * 1rem);
+}
+
 .activity-study {
   background-color: var(--c-study-bg);
+}
+
+.activity-study::before {
+  background-image: url("../images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: calc(79 / 16 * 1rem);
+  block-size: calc(79 / 16 * 1rem);
+  inset-block-start: calc(-6 / 16 * 1rem);
 }
 
 .activity-exercise {
   background-color: var(--c-exercise-bg);
 }
 
+.activity-exercise::before {
+  background-image: url("../images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: calc(81 / 16 * 1rem);
+  block-size: calc(55 / 16 * 1rem);
+  inset-block-start: calc(-2 / 16 * 1rem);
+}
+
 .activity-social {
   background-color: var(--c-social-bg);
+}
+
+.activity-social::before {
+  background-image: url("../images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: calc(75 / 16 * 1rem);
+  block-size: calc(100 / 16 * 1rem);
+  inset-block-start: calc(-15 / 16 * 1rem);
 }
 
 .activity-self-care {
   background-color: var(--c-self-care-bg);
 }
 
+.activity-self-care::before {
+  background-image: url("../images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: calc(67 / 16 * 1rem);
+  block-size: calc(67 / 16 * 1rem);
+  inset-block-start: calc(-11 / 16 * 1rem);
+}
+
 .activity-stats {
   background-color: var(--c-stats-bg);
+  z-index: 1;
 }
 
 h3 {
