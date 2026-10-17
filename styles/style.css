@@ -63,6 +63,7 @@
   --c-stats-bg: var(--color-navy-900);
   --c-outer-ring: var(--color-white);
   --c-timeframe-btn-active: var(--color-white);
+  --c-timeframe-btn-outline: var(--color-white);
 
   --ff-primary: var(--font-family-rubik);
 
@@ -228,6 +229,15 @@ fieldset {
 input[type="radio"] {
   appearance: none;
   position: absolute;
+}
+
+input[type="radio"]:focus-visible {
+  outline: none;
+}
+
+input[type="radio"]:focus-visible + label {
+  outline: calc(2 / 16 * 1rem) solid var(--c-timeframe-btn-outline);
+  outline-offset: calc(3 / 16 * 1rem);
 }
 
 input[type="radio"]:checked + label,
