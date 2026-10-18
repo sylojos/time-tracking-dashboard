@@ -362,6 +362,16 @@ h3 {
   color: var(--c-activity);
 }
 
+button[aria-haspopup="menu"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .activity-time p:first-child {
   font-size: var(--fs-current-time);
   font-weight: var(--fw-current-time);
