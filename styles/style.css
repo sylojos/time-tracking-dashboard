@@ -40,8 +40,12 @@
   --spacing-34: calc(34 / 16 * 1rem);
   --spacing-32: calc(32 / 16 * 1rem);
   --spacing-29: calc(29 / 16 * 1rem);
+  --spacing-28: calc(28 / 16 * 1rem);
   --spacing-24: calc(24 / 16 * 1rem);
+  --spacing-18: calc(18 / 16 * 1rem);
   --spacing-17: calc(17 / 16 * 1rem);
+  --spacing-7: calc(7 / 16 * 1rem);
+  --spacing-6: calc(6 / 16 * 1rem);
   --spacing-4: calc(4 / 16 * 1rem);
 
   --radius-full: 50%;
@@ -96,11 +100,15 @@
   --pdb-user: var(--spacing-32);
   --pdb-fieldset: var(--spacing-24);
   --pdi-fieldset: var(--spacing-34);
+  --pdie-previous-time: var(--spacing-6);
+  --pdi-stats: var(--spacing-24) var(--spacing-18);
+  --pdb-stats: var(--spacing-28);
 
   --gap-row-dashboard: var(--spacing-24);
   --gap-activity: var(--spacing-24);
   --gap-col-user: var(--spacing-17);
   --gap-row-h2: var(--spacing-4);
+  --gap-row-stats: var(--spacing-7);
 
   --br-outer-ring: var(--radius-full);
   --br-user-avatar: var(--radius-full);
@@ -360,6 +368,16 @@ label {
 .activity-stats {
   background-color: var(--c-stats-bg);
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-row-stats);
+  padding-inline: var(--pdi-stats);
+  padding-block: var(--pdb-stats);
+}
+
+.activity-type {
+  display: flex;
+  justify-content: space-between;
 }
 
 h3 {
@@ -398,6 +416,12 @@ ul[role="menu"] {
   display: none;
 }
 
+.activity-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .activity-time p:first-child {
   font-size: var(--fs-current-time);
   font-weight: var(--fw-current-time);
@@ -408,4 +432,5 @@ ul[role="menu"] {
   font-size: var(--fs-previous-time);
   font-weight: var(--fw-previous-time);
   color: var(--c-previous-time);
+  padding-inline-end: var(--pdie-previous-time);
 }
