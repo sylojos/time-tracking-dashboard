@@ -19,6 +19,7 @@
   --color-pink-400: oklch(69.724% 0.19801 12.131);
   --color-green-400: oklch(76.275% 0.1614 153.95);
   --color-yellow-300: oklch(84.411% 0.13336 87.258);
+  --color-grey-300: oklab(65.943% -0.00071 -0.00182 / 0.3);
 
   --font-family-rubik: "Rubik", sans-serif;
 
@@ -64,6 +65,8 @@
   --c-outer-ring: var(--color-white);
   --c-timeframe-btn-active: var(--color-white);
   --c-timeframe-btn-outline: var(--color-white);
+  --c-menu-button-icon-hover: var(--color-white);
+  --c-menu-button-bg-hover: var(--color-grey-300);
 
   --ff-primary: var(--font-family-rubik);
 
@@ -367,9 +370,17 @@ button[aria-haspopup="menu"] {
   justify-content: center;
   align-items: center;
   border: 0;
-  padding: 0;
+  padding: calc(6 / 16 * 1rem);
   background-color: transparent;
   cursor: pointer;
+}
+
+button[aria-haspopup="menu"]:hover {
+  background-color: var(--c-menu-button-bg-hover);
+}
+
+button[aria-haspopup="menu"]:hover path {
+  fill: var(--c-menu-button-icon-hover);
 }
 
 .activity-time p:first-child {
