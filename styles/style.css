@@ -69,6 +69,7 @@
   --c-menu-button-icon-hover: var(--color-white);
   --c-menu-button-bg-hover: var(--color-grey-300);
   --c-menu-button-bg-active: var(--color-grey-500);
+  --c-menu-button-outline: var(--color-white);
 
   --ff-primary: var(--font-family-rubik);
 
@@ -375,6 +376,10 @@ button[aria-haspopup="menu"] {
   padding: calc(6 / 16 * 1rem);
   background-color: transparent;
   cursor: pointer;
+}
+
+button[aria-haspopup="menu"]:focus-visible {
+  outline: calc(2 / 16 * 1rem) solid var(--c-menu-button-outline);
 }
 
 button[aria-haspopup="menu"]:hover {
