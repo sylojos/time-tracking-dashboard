@@ -9,6 +9,7 @@
 :root {
   --color-purple-700: oklch(50.746% 0.22298 295.552);
   --color-purple-600: oklch(52.381% 0.23445 279.232);
+  --color-purple-550: oklch(37.42% 0.1107 276.395);
   --color-purple-500: oklch(59.682% 0.12443 278.228);
   --color-navy-950: oklch(19.507% 0.03338 269.93);
   --color-navy-900: oklch(26.347% 0.07863 276.571);
@@ -74,6 +75,7 @@
   --c-menu-button-bg-hover: var(--color-grey-300);
   --c-menu-button-bg-active: var(--color-grey-500);
   --c-menu-button-outline: var(--color-white);
+  --c-stats-bg-hover: var(--color-purple-550);
 
   --ff-primary: var(--font-family-rubik);
 
@@ -373,6 +375,11 @@ label {
   row-gap: var(--gap-row-stats);
   padding-inline: var(--pdi-stats);
   padding-block: var(--pdb-stats);
+  cursor: pointer;
+}
+
+.activity-stats:hover:not(:has(button[aria-haspopup="menu"]:hover)) {
+  background-color: var(--c-stats-bg-hover);
 }
 
 .activity-type {
