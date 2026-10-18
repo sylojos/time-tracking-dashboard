@@ -394,6 +394,10 @@ button[aria-haspopup="menu"]:active {
   background-color: var(--c-menu-button-bg-active);
 }
 
+ul[role="menu"] {
+  display: none;
+}
+
 .activity-time p:first-child {
   font-size: var(--fs-current-time);
   font-weight: var(--fw-current-time);
