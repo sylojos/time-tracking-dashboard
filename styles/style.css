@@ -458,4 +458,8 @@ ul[role="menu"] {
     --fs-current-time: var(--font-size-28);
     --fs-previous-time: var(--font-size-12);
   }
+
+  .outer-ring {
+    flex-shrink: 0;
+  }
 }
