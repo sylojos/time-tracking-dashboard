@@ -50,6 +50,7 @@
   --spacing-4: calc(4 / 16 * 1rem);
 
   --radius-full: 50%;
+  --radius-16: calc(16 / 16 * 1rem);
   --radius-14: calc(14 / 16 * 1rem);
 
   --c-h2: var(--color-navy-200);
@@ -116,6 +117,9 @@
   --br-user-avatar: var(--radius-full);
   --br-user: var(--radius-14);
   --br-user-wrapper: var(--radius-14);
+  --br-activity-card: var(--radius-14);
+  --bssr-activity-stats: var(--radius-16);
+  --bser-activity-stats: var(--radius-16);
 }
 
 *,
@@ -281,6 +285,8 @@ label {
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
+  border-radius: var(--br-activity-card);
+  box-shadow: inset 0px -1px 0px 0px black;
 }
 
 .activity-card::before {
@@ -376,6 +382,8 @@ label {
   padding-inline: var(--pdi-stats);
   padding-block: var(--pdb-stats);
   cursor: pointer;
+  border-start-start-radius: var(--bssr-activity-stats);
+  border-start-end-radius: var(--bser-activity-stats);
 }
 
 .activity-stats:hover:not(:has(button[aria-haspopup="menu"]:hover)) {
