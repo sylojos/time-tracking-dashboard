@@ -449,3 +449,13 @@ ul[role="menu"] {
   color: var(--c-previous-time);
   padding-inline-end: var(--pdie-previous-time);
 }
+
+@media (max-width: 21.5em) {
+  :root {
+    --font-size-28: calc(28 / 16 * 1rem);
+    --font-size-12: calc(12 / 16 * 1rem);
+
+    --fs-current-time: var(--font-size-28);
+    --fs-previous-time: var(--font-size-12);
+  }
+}
