@@ -487,6 +487,13 @@ ul[role="menu"] {
   :root {
     --font-size-40: calc(40 / 16 * 1rem);
 
+    --spacing-80: calc(80 / 16 * 1rem);
+    --spacing-50: calc(50 / 16 * 1rem);
+    --spacing-40: calc(40 / 16 * 1rem);
+    --spacing-8: calc(8 / 16 * 1rem);
+    --spacing-3: calc(3 / 16 * 1rem);
+    --spacing-2: calc(2 / 16 * 1rem);
+
     --fs-username: var(--font-size-40);
     --fs-current-time: var(--font-size-32);
     --fs-previous-time: var(--font-size-15);
@@ -494,7 +501,7 @@ ul[role="menu"] {
 
   .dashboard {
     flex-direction: row;
-    column-gap: 24px;
+    column-gap: var(--spacing-24);
   }
 
   .user-wrapper {
@@ -508,14 +515,14 @@ ul[role="menu"] {
   .user {
     flex-direction: column-reverse;
     align-items: flex-start;
-    row-gap: 40px;
-    padding-top: 34px;
-    padding-bottom: 80px;
+    row-gap: var(--spacing-40);
+    padding-top: var(--spacing-34);
+    padding-bottom: var(--spacing-80);
   }
 
   .user h2 {
-    row-gap: 2px;
-    margin-left: 3px;
+    row-gap: var(--spacing-2);
+    margin-left: var(--spacing-3);
   }
 
   .outer-ring {
@@ -529,13 +536,13 @@ ul[role="menu"] {
   }
 
   fieldset {
-    padding-left: 32px;
-    padding-top: 50px;
+    padding-left: var(--spacing-32);
+    padding-top: var(--spacing-50);
   }
 
   .timeframe {
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: var(--spacing-40);
   }
 
   .activity-card {
@@ -543,12 +550,12 @@ ul[role="menu"] {
   }
 
   .activity-stats {
-    row-gap: 18px;
+    row-gap: var(--spacing-18);
   }
 
   .activity-time {
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 8px;
+    row-gap: var(--spacing-8);
   }
 }
