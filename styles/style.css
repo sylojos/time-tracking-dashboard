@@ -516,13 +516,13 @@ ul[role="menu"] {
     flex-direction: column-reverse;
     align-items: flex-start;
     row-gap: var(--spacing-40);
-    padding-top: var(--spacing-34);
-    padding-bottom: var(--spacing-80);
+    padding-block-start: var(--spacing-34);
+    padding-block-end: var(--spacing-80);
   }
 
   .user h2 {
     row-gap: var(--spacing-2);
-    margin-left: var(--spacing-3);
+    margin-inline-start: var(--spacing-3);
   }
 
   .outer-ring {
@@ -536,8 +536,8 @@ ul[role="menu"] {
   }
 
   fieldset {
-    padding-left: var(--spacing-32);
-    padding-top: var(--spacing-50);
+    padding-inline-start: var(--spacing-32);
+    padding-block-start: var(--spacing-50);
   }
 
   .timeframe {
