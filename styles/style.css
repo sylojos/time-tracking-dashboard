@@ -559,3 +559,58 @@ ul[role="menu"] {
     row-gap: var(--spacing-8);
   }
 }
+
+@media (min-width: 64em) {
+  :root {
+    --spacing-30: calc(30 / 16 * 1rem);
+    --spacing-26: calc(26 / 16 * 1rem);
+    --spacing-21: calc(21 / 16 * 1rem);
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-block-size: 100dvb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dashboard {
+    column-gap: var(--spacing-30);
+    max-inline-size: 69.375rem;
+  }
+
+  .user-wrapper {
+    flex-basis: calc(100% / 4 - 0.46875rem);
+  }
+
+  .activity-wrapper {
+    flex-basis: calc(100% * 3 / 4 - 1.40625rem);
+    gap: var(--spacing-30);
+  }
+
+  fieldset {
+    padding-block-start: var(--spacing-26);
+  }
+
+  .timeframe {
+    row-gap: var(--spacing-21);
+  }
+
+  .activity-card {
+    flex-basis: calc((100% - 1.875rem * 2) / 3);
+    block-size: auto;
+  }
+
+  .activity-stats {
+    padding-inline: var(--spacing-30);
+    padding-block-start: var(--spacing-29);
+    padding-block-end: var(--spacing-32);
+  }
+
+  .activity-time p:first-child {
+    /* from font size 46px at viewport width 1024px to font size 56px at viewport width 1158px */
+    font-size: clamp(2.875rem, calc(7.46vw - 1.9rem), 3.5rem);
+  }
+}
