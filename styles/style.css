@@ -463,3 +463,22 @@ ul[role="menu"] {
     flex-shrink: 0;
   }
 }
+
+@media (min-width: 37.5em) {
+  :root {
+    --font-size-28: calc(28 / 16 * 1rem);
+    --font-size-13: calc(13 / 16 * 1rem);
+
+    --fs-current-time: var(--font-size-28);
+    --fs-previous-time: var(--font-size-13);
+  }
+
+  .activity-wrapper {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .activity-card {
+    flex-basis: calc(50% - 0.75rem);
+  }
+}
