@@ -482,3 +482,73 @@ ul[role="menu"] {
     flex-basis: calc(50% - 0.75rem);
   }
 }
+
+@media (min-width: 48em) {
+  :root {
+    --font-size-40: calc(40 / 16 * 1rem);
+
+    --fs-username: var(--font-size-40);
+    --fs-current-time: var(--font-size-32);
+    --fs-previous-time: var(--font-size-15);
+  }
+
+  .dashboard {
+    flex-direction: row;
+    column-gap: 24px;
+  }
+
+  .user-wrapper {
+    flex-basis: calc(100% / 3 - 0.5rem);
+  }
+
+  .activity-wrapper {
+    flex-basis: calc(100% * 2 / 3 - 1rem);
+  }
+
+  .user {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 40px;
+    padding-top: 34px;
+    padding-bottom: 80px;
+  }
+
+  .user h2 {
+    row-gap: 2px;
+    margin-left: 3px;
+  }
+
+  .outer-ring {
+    inline-size: calc(84 / 16 * 1rem);
+    block-size: calc(84 / 16 * 1rem);
+  }
+
+  .user-avatar {
+    inline-size: calc(78 / 16 * 1rem);
+    block-size: calc(78 / 16 * 1rem);
+  }
+
+  fieldset {
+    padding-left: 32px;
+    padding-top: 50px;
+  }
+
+  .timeframe {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .activity-card {
+    block-size: calc(195 / 16 * 1rem);
+  }
+
+  .activity-stats {
+    row-gap: 18px;
+  }
+
+  .activity-time {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 8px;
+  }
+}
